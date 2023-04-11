@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hindi Shayari</string>
+
+    <style name="corner_Radius">
+        <item name="cornerSize">6dp</item>
+    </style>
+
+</resources>

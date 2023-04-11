@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:orientation="vertical"
+    android:background="@color/purple_700"
+    style="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/nav_headerIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher_adaptive_fore" />
+
+    <TextView
+        android:id="@+id/nav_HeaderTitle"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nav_headerIcon"
+        android:layout_alignStart="@+id/nav_headerIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/app_name"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/nav_HeaderDis"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nav_HeaderTitle"
+        android:layout_alignBottom="@+id/nav_HeaderTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="-22dp"
+        android:layout_marginBottom="-20dp"
+        android:text="www.shayaripoetry.in"
+        android:textColor="#FFF" />
+
+
+</RelativeLayout>

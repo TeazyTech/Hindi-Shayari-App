@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/postImage"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:cropToPadding="true"
+            android:adjustViewBounds="true"
+            app:shapeAppearanceOverlay="@style/corner_Radius"
+
+
+            />
+
+        <TextView
+            android:id="@+id/postTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toRightOf="@+id/postImage"
+            android:paddingTop="12dp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/postDiscription"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="659dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_below="@+id/postTitle"
+            android:layout_toRightOf="@+id/postImage"
+            android:layout_marginStart="16dp"
+
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

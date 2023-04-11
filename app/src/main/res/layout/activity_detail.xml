@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:titleTextColor="#FFF"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+
+<!--    <WebView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/webView"-->
+<!--        android:layout_below="@id/toolBar"/>-->
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:id="@+id/progressBar"/>-->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/toolBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pImg"
+        android:layout_below="@id/toolBar"/>
+
+    <TextView
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:id="@+id/pTitle"
+        android:layout_below="@id/pImg"
+        style="@style/TextAppearance.AppCompat.Title"/>
+
+    <TextView
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/pDis"
+        android:layout_below="@id/pTitle"
+        style="@style/TextAppearance.AppCompat.Body1"/>
+    </RelativeLayout>
+
+</ScrollView>
+
+
+</RelativeLayout>
