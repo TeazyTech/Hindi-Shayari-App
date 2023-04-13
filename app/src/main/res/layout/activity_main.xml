@@ -16,7 +16,7 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
+            android:background="@color/design_default_color_secondary_variant"
             app:titleTextColor="#FFF"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
 

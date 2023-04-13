@@ -59,9 +59,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailActivity.class);
-//                intent.putExtra("url", item.getUrl());
-                intent.putExtra("img", elements.get(0).attr("src"));
-                intent.putExtra("title", item.getTitle());
                 intent.putExtra("discription", item.getContent());
                 context.startActivity(intent);
             }

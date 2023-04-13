@@ -20,12 +20,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 public class DetailActivity extends AppCompatActivity {
-    ProgressBar progressBar;
+//    ProgressBar progressBar;
     Toolbar toolbar;
-//    WebView webView;
-    ImageView imageView;
-    TextView titleText;
-    TextView disText;
+    WebView webView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,43 +31,25 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 //        progressBar = findViewById(R.id.progressBar);
         toolbar = findViewById(R.id.toolBar);
-//        webView = findViewById(R.id.webView);
-        imageView = findViewById(R.id.pImg);
-        titleText = findViewById(R.id.pTitle);
-        disText = findViewById(R.id.pDis);
-
+        webView = findViewById(R.id.webView);
         Intent intent = getIntent();
-        int image = intent.getIntExtra("img",0);
-        String title = intent.getStringExtra("title");
+        String imgcompress = "<style>img{display: inline; max-width: 100%;}</style>";
         String discription = intent.getStringExtra("discription");
-
-        titleText.setText(title);
-//        imageView.setImageResource(image);
-        Glide.with(this).load(image).into(imageView);
-
-
-        Document document = Jsoup.parse(discription );
-        disText.setText(document.wholeText());
-
+        String  data = imgcompress+discription;
 
         setSupportActionBar(toolbar);
-//        webView.setVisibility(View.INVISIBLE);
-//        webView.getSettings().setJavaScriptEnabled(true);
-//        webView.setWebChromeClient(new WebChromeClient());
-//        webView.setWebViewClient(new WebViewClient(){
-//            @Override
-//            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-//                super.onPageStarted(view, url, favicon);
-//            }
-//
-//            @Override
-//            public void onPageFinished(WebView view, String url) {
-//                super.onPageFinished(view, url);
-//                progressBar.setVisibility(View.GONE);
-//                webView.setVisibility(View.VISIBLE);
-//            }
-//        });
-//        webView.loadUrl(getIntent().getStringExtra("url"));
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.loadData(data,"text/html", "UTF-8");
+
+        webView.setDrawingCacheEnabled(true);
+        webView.getSettings().setLoadsImagesAutomatically(true);
+        if(webView.canGoBack()){
+            webView.goBack();
+        } else if (webView.canGoForward()) {
+            webView.goForward();
+        }
 
 
     }
